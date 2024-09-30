@@ -16,3 +16,16 @@ function loaded() {
 export function sayHello() {
     return 'hello';
 }
+
+/**
+ * Function to show alert with the selected radio button value
+ */
+export function showAlert() {
+    const options = document.getElementsByName('option');
+    for (let option of options) {
+        if (option.checked) {
+            alert(option.value);
+            break;
+        }
+    }
+}
